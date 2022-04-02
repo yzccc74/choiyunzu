@@ -1,0 +1,213 @@
+@charset "UTF-8";
+
+body { min-width: unset;}
+
+.inner {width: 100%; margin: unset;}
+
+/* HEADER */
+header::after {
+    display: none;
+}
+header .topmenu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #111111;
+    padding: 0;
+    width: 100%;
+}
+header .topmenu .mlogo {
+    display: block;
+    width: 100px;
+    height: 50px;
+    background: url(../images/logo.png) 50% 60% no-repeat;
+    background-size: 80px;
+}
+header .topmenu .mbt {
+    display: block;
+    width: 50px;
+    height: 50px;
+    position: relative;
+}
+.mbt .bar1,
+.mbt .bar2,
+.mbt .bar3{
+    background: #fff;
+    width: 33px;
+    height: 2px;
+    position: absolute;
+    left: -12px; top: 12px;
+    -webkit-transform: rotate(-180deg);
+    transform: rotate(-180deg);
+    transition: all 0.5s ease;
+}
+.mbt .bar2{ top: 22px; }
+.mbt .bar3{
+    top: 32px;
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+.mbt.active .bar1{
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    top: 22px;
+}
+.mbt.active .bar2{ opacity: 0; }
+.mbt.active .bar3{
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    top: 22px;
+}
+header .topmenu > a,
+header .topmenu > span {
+    display: none;
+}
+
+/* NAV */
+header nav {
+    display: none;
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    top:50px; left:0; right:0; bottom:0;
+    background: rgba(33, 30, 31, 0.95);
+}
+header nav.active {
+    display: block;
+}
+nav > .gnball {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+nav > .gnball > .gnb {
+    width: 100%;
+    height: 50px;
+}
+nav > .gnball > .gnb > a {
+    text-align: unset;
+    padding: 0 0 0 20px;
+    font-weight: 600;
+}
+nav > .gnball > .sub_gnb {
+    background: unset;
+    position: unset;
+    flex-direction: column;
+}
+.sub_gnb > ul {
+    width: 100%;
+    background: #f4cd54;
+    margin: 0 0 20px 0;
+    padding: 0 0 0 20px;
+    text-align: unset;
+    position: absolute;
+    top:0; left: 150px;
+    display: none;
+}
+.sub_gnb > ul:nth-of-type(2) {
+    position: absolute;
+    top: 50px;
+}
+.sub_gnb > ul:nth-of-type(3) {
+    position: absolute;
+    top: 100px;
+}
+.sub_gnb > ul:nth-of-type(4) {
+    position: absolute;
+    top: 150px;
+}
+.sub_gnb > ul:last-of-type {
+    position: absolute;
+    top: 200px;
+}
+.sub_gnb > ul > li {
+    height: 50px;
+    position: relative;
+}
+.sub_gnb > ul > li:first-of-type::after {
+    border-top: 5px solid transparent;
+    border-left: 6px solid rgb(112, 92, 74);
+    border-bottom: 5px solid transparent;
+    content: "";
+    position: absolute;
+    top: 20px; left: -20px;
+}
+.sub_gnb > ul > li > a {
+    height: 50px;
+    line-height: 50px;
+    font-size: 13px;
+    font-weight: 600;
+    color: rgba(33, 30, 31, 0.7);
+}
+.gnb > a.on {
+    color: #f4cd54;
+    background: rgb(112, 92, 74);
+    font-weight: 600;
+}
+.sub_gnb > ul > li > a.on {
+    color: rgba(33, 30, 31);
+    background-color: #f4cd54;
+    font-weight: 600;
+}
+.sub_gnb > ul.on {
+    display: block;
+}
+
+/* VISUAL */
+section.visual {
+    background: radial-gradient(transparent, #080808 90%) 100% 100% no-repeat, url(../images/space_2.jpg) 50% 52% no-repeat;
+    background-size: 100%, cover;
+}
+.visual .arrowbt {
+    display: none;
+}
+
+/* COMING UP */
+.art1::before {
+    border-top: 100px solid transparent;
+    border-left: 200px solid rgb(112, 92, 74, 0.05);
+    border-bottom: 100px solid transparent;
+    transform: rotate(50deg);
+    content: "";
+    position: absolute;
+    top: 120px; right: -20px;
+}
+.art1::after {
+    border-top: 100px solid transparent;
+    border-left: 200px solid rgb(112, 92, 74, 0.05);
+    border-bottom: 100px solid transparent;
+    transform: rotate(30deg);
+    content: "";
+    position: absolute;
+    top: 100px; right: -120px;
+}
+.swiper-container {
+    width: 90%;
+}
+
+/* ART SPACE */
+.art2 .group {
+    width: 100%;
+    margin: 0 0 50px 0;
+}
+.art2 .group .box {
+    width: 90%;
+    margin: 40px auto;
+    background-size: cover;
+}
+.art2 .group .box:hover {
+    background-size: cover;
+    transition: unset;
+}
+.art2 .group .box > div.on {
+    transform: translateX(0%);
+    transition: all 0.1s;
+}
+
+/* FOOTER */
+footer .inner {
+    background: none;
+    padding: 30px 20px;
+}

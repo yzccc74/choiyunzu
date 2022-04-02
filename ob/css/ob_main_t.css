@@ -1,0 +1,219 @@
+@charset "UTF-8";
+
+body { min-width: unset;}
+
+/* 컨텐츠영역 COMMON CSS */
+section .tit {
+    font-size: 3em;
+}
+section h2 {
+    font-size: 1em;
+}
+section h4 {
+    margin: 15px 0;
+    font-size: 0.9em;
+}
+section .bt {
+    background: rgba(255,255,255,0.2);
+}
+
+/* 헤더 */
+header.sec6 {
+    background: rgba(255,255,255,0.95);
+}
+header.sec6 .mbt .bar1,
+header.sec6 .mbt .bar2,
+header.sec6 .mbt .bar3 {
+    background: #222;
+}
+header.sec2 .mbt .bar1,
+header.sec2 .mbt .bar2,
+header.sec2 .mbt .bar3,
+header .mbt.active .bar1,
+header .mbt.active .bar2, 
+header .mbt.active .bar3 {
+    background: #fff;
+}
+
+/* 네비게이션 */
+header nav {
+    width: 80%;
+    max-width: 600px;
+}
+nav .gnb {
+    width: 95%;
+    height: 90%;
+}
+nav .gnb .gnbMenu .title {
+    height: 45px;
+    line-height: 45px;
+}
+
+/* 마우스애니메이션 */
+.mouse,
+.mouse span {
+    display: none;
+}
+/* ABinBev 링크 */
+.link {
+    display: none;
+}
+header.sec1 .link {
+    display: block;
+}
+
+
+/* 텍스트타이핑 */
+.headline {
+    font-size: 70px;
+}
+/* 타이틀 애니메이션 */
+.sec02.on .animate-in:before,
+.sec02.on .animate-in:after,
+.sec03.on .animate-in:before,
+.sec03.on .animate-in:after {
+    top: 0px;
+}
+
+/* COMPANY */
+.sec02 {
+    background: url(../images/beer_16.jpg) 20% 100% no-repeat;
+    background-size: 200%;
+}
+.sec02.on::before {
+    background: rgba(48, 38, 23, 0.6);
+    left: 60%;
+}
+.sec02 .cts_wrapper,
+.sec03 .cts_wrapper {
+    width: 100%;
+    flex-direction: column;
+}
+.sec02 .cts_wrapper .left,
+.sec02 .cts_wrapper .right,
+.sec03 .cts_wrapper .left {
+    width: 95%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.sec02 .cts_wrapper .left::before {
+    background: none;
+}
+.sec02 .tit,
+.sec03 .tit {
+    margin: 0;
+}
+.sec02 .bt {
+    margin: 0 0 50px;
+}
+.sec02 .cts_wrapper .right {
+    padding: 0;
+}
+.sec02 .group .box {
+    height: 40vh;
+}
+.sec02 .box:first-of-type {
+    background: url(../images/beer_9.jpg) 55% 20% no-repeat;
+    background-size: 190%;
+}
+.sec02 .box .flip {
+    font-size: 1em;
+}
+
+/* BRANDS */
+.sec03 .cts_wrapper .left::before {
+    top: -190%; left: -20%;
+    width: 75%;
+    height: 1200px;
+}
+.sec03 .cts_wrapper .left::after {
+    content: "";
+    position: absolute;
+    top:-180%; left:-10%;
+    width: 75%;
+    height: 1200px;
+    background: rgba(243, 156, 31, 0.03);
+    transform: skew(-45deg);
+}
+.sec03 .tit,
+.sec03 h4,
+.sec03 .bt {
+    position: relative;
+    z-index: 20;
+}
+.sec03 .bt {
+    margin: 30px auto 60px;
+}
+.sec03 .cts_wrapper .right {
+    width: 100%;
+}
+.sec03 .group {
+    width: 98%;
+    max-width: 950px;
+    height: 50vh;
+    margin: 0 auto; 
+}
+.sec03 .group .box {
+    width: 20%;
+    height: 45%;
+    margin: 0 2.5% 30px;
+}
+.sec03 .box::after {
+    height: 50px;
+    line-height: 50px;
+    font-size: 1.1em;
+}
+
+/* NEWSROOM */
+.sec04 .tit {
+    font-size: 3em;
+}
+.sec04 .tit::before {
+    left: 5%;
+}
+.sec04 .tit::after {
+    right: 5%;
+}
+.sec04 .group {
+    width: 98%;
+    max-width: 950px;
+    margin: 0 auto;
+}
+.sec04 .group .box {
+    width: 30%;
+    margin: 0 1.6% 25px;
+}
+
+/* BETTER WORLD */
+.sec05 .cts_wrapper {
+    width: 95%;
+    max-width: 1000px;
+    padding: 0 20px 0 0;
+}
+.sec05 .cts_wrapper .right {
+    padding: 100px 4%;
+    min-width: 420px;
+}
+.sec05 .right::before {
+    width: 120%;
+    max-width: 600px;
+}
+.sec05 .tit {
+    font-size: 2.5em;
+}
+.sec05 .icons {
+    width: 100%;
+    max-width: 350px;
+    margin: 30px 0;
+}
+.sec05 .icons > div {
+    width: 99px;
+    height: 93px;
+    line-height: 93px;
+    background-size: 99px;
+}
+
+/* 리모트컨트롤 */
+.fullpage_scroll aside{
+    right: 8px;
+}

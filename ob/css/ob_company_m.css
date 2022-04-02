@@ -1,0 +1,221 @@
+@charset "UTF-8";
+
+body { min-width: unset;}
+ul { padding: 5px 10px 10px;}
+.inner { width: 100% }
+
+header {
+    height: 50px;
+}
+header .logo {
+    width: 65px;
+    height: 50px;
+    background-size: 65px;
+}
+header .mbt {
+    width: 50px;
+    height: 50px;
+}
+.mbt .bar1,
+.mbt .bar2,
+.mbt .bar3{
+    left: 9px; top: 14px;
+}
+.mbt .bar2{ top: 24px; }
+.mbt .bar3{
+    top: 34px;
+}
+.mbt.active .bar1{
+    top: 24px;
+}
+.mbt.active .bar3{
+    top: 24px;
+}
+/* 네비게이션 */
+header nav {
+    width: 80%;
+}
+nav .gnb {
+    height: 90%;
+}
+nav .gnb .gnbMenu .title {
+    height: 45px;
+    line-height: 45px;
+}
+/* 서브메뉴 */
+.gnbMenu .snb {
+    flex-direction: column;
+}
+.gnbMenu .snb li,
+.gnbMenu:first-of-type .snb li {
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+}
+.gnbMenu .snb li::after {
+    width: unset;
+    height: 1px;
+    top:38px; left: 30px; right: 30px;
+}
+
+/* 마우스애니메이션 */
+.mouse {
+    bottom: 0;
+    width: 36px;
+    height: 36px;
+    border: none;
+    background: url(../images/arrow_mouse.png) 50% 50% no-repeat;
+    opacity: 0.7;
+}
+.mouse span {
+    background: none;
+}
+
+/* 비쥬얼 */
+section.visual {
+    padding: 0 20px;
+}
+.visual::before {
+    background: rgba(5, 38, 83, 0.5);
+}
+.visual .location {
+    margin: 0 5px;
+}
+.visual .title {
+    padding: 0 20px 0 0;
+}
+.visual h1 {
+    font-size: 3em;
+    margin: 0 0 20px 0; 
+}
+.visual h3 {
+    font-size: 1em;
+}
+.visual h3 > span {
+    display: block;
+}
+.visual h3 > span:nth-of-type(2) {
+    margin: 0 0 10px 0;
+}
+
+/* 컨텐츠 */
+article .tit {
+    font-size: 1em;
+}
+article .sub {
+    font-size: 0.9em;
+}
+/* 회사소개 */
+.art1 {
+    padding: 50px 20px;
+    background: linear-gradient(to right, #fafafa, #f3f5f7);
+}
+.art1 .group {
+    width: 100%;
+    padding: 0;
+    clear: unset;
+    position: unset;
+    display: flex;
+    flex-direction: column;
+}
+.art1 .group .number {
+    order: 1;
+    position: unset;
+}
+.art1 .group .tit {
+    order: 2;
+    padding: 10px 0;
+}
+.art1 .group .sub {
+    order: 4;
+    padding: 0;
+}
+.art1 .group .img {
+    order: 3;
+    width: 100%;
+    height: 150px;
+}
+.art1 .group:nth-of-type(even) {
+    float: unset;
+    margin: 30px 0;
+}
+/* 연혁 */
+.art2 {
+    padding: 60px 30px;
+}
+.art2 h1 {
+    margin: 0 0 20px 0;
+}
+.art2 .group {
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.art2 .group::after,
+.art2 .group .box::before,
+.art2 .group .box::after {
+    display: none;
+}
+.art2 .group .box {
+    width: 100%;
+    height: auto;
+    margin: 0 0 10px 0;
+}
+.art2 .box ul {
+    transition: all .6s;
+}
+.art2 .box ul::before {
+    content: "";
+    position: absolute;
+    top:15px; right:5px;
+    border-radius: unset;
+    width: 25px;
+    height: 25px;
+    background: url(../images/arrow.png) 50% 50% no-repeat;
+    background-size: 25px;
+    transition: all .5s;
+}
+.art2 .box ul.active {
+    background: rgba(4, 36, 83, 0.5);
+}
+.art2 .group .box ul.active::before {
+    transform: rotate(180deg);
+}
+.art2 .box ul h3 {
+    margin: 10px 0;
+}
+.art2 .box ul li {
+    display: none;
+}
+.art2 .box ul li.active {
+    display: flex;
+}
+/* ABinBev 소개 */
+.art3 .inner {
+    width: 100%;
+    padding: 40px 0;
+}
+.art3 img {
+    width: 100%;
+}
+.art3 .tit {
+    margin: 10px 20px;
+}
+.art3 .sub {
+    margin: 0 20px;
+}
+
+/* 푸터 */
+footer {
+    padding: 30px 0;
+}
+footer .txt {
+    font-size: 0.75em
+}
+footer .txt > span {
+    padding: 0 5px;
+}
+footer .adr,
+footer .copy {
+    font-size: 0.7em;
+}

@@ -1,0 +1,406 @@
+@import url('https://fonts.googleapis.com/css?family=Black+Han+Sans|Noto+Sans+KR|Paytone+One&display=swap');
+
+* { box-sizing: border-box; }
+body { margin:0; padding:0; min-width: 1024px; font-family: 'Noto Sans KR', sans-serif; }
+
+.inner { width: 1000px; margin: 0 auto; }
+a { color: #fff; text-decoration: none;}
+
+/* HEADER */
+header {
+    width: 100%;
+    position: fixed;
+    z-index: 50;
+    top:0; left:0;
+}
+.changecolor {
+    background-color: rgba(17, 17, 17, 0.9);
+    transition: all .2s ease-in-out;
+}
+header::after {
+    width: 100%;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.2);
+    content: "";
+    position: absolute;
+    top:100px;
+    z-index: 10;
+}
+header .inner {
+    height: 100%;
+}
+header .topmenu {
+    height: 50px;
+    line-height: 50px;
+    text-align: right;
+    color: rgba(244, 205, 84, 0.8);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11px;
+    position: relative;
+}
+header .topmenu .mlogo,
+header .topmenu .mbt{ 
+    display: none;
+}
+header .topmenu span {
+    margin: 0 0 0 20px;
+}
+header .topmenu span:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+header .topmenu .home {
+    position: absolute;
+    top: 0; left: 0;
+    margin:0;
+    width: 30px;
+    height: 50px;
+    line-height: 50px;
+    background: url(../images/home.png) 50% 50% no-repeat;
+    background-size: 20px;
+}
+
+/* NAV */
+header nav {
+    width: 900px;
+    height: 50px;
+    margin: 0 auto;
+}
+nav > .gnball {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+nav > .gnball > .gnb {
+    width: 20%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+nav > .gnball > .gnb > a {
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    display: block;
+    font-size: 14px;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}
+nav > .gnball > .sub_gnb {
+    width: 100%;
+    background: rgba(33, 30, 31, 0.98);
+    position: absolute;
+    top: 50px;
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+    height: 0;
+}
+.sub_gnb > ul {
+    width: 20%;
+    margin: 0; padding: 0;
+    list-style: none;
+    text-align: center;
+}
+.sub_gnb > ul > li {
+    width: 100%;
+    height: 40px;
+}
+.sub_gnb > ul > li > a {
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    display: block;
+    font-size: 13.5px;
+}
+.gnb > a.on {
+    color: #f4cd54;
+}
+.gnb:hover > a {
+    color: #f4cd54;
+}
+.sub_gnb > ul > li:hover > a {
+    color: rgba(33, 30, 31, 0.7);
+    background-color: #f4cd54;
+    font-weight: 600;
+    cursor: pointer;
+}
+.gnball:hover > .gnb > a {
+    font-weight: 600;
+    cursor: pointer;
+}
+.gnball:hover > .sub_gnb {
+    height: 200px;
+    transition: all .5s ease-in-out;
+}
+
+/* VISUAL */
+section.visual {
+    width: 100%;
+    height: 720px;
+    background: url(../images/barbeque_5.jpg) 50% 45% no-repeat;
+    background-size: cover;
+    position: relative;
+}
+.visual::before {
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.2);
+    content: "";
+    position: absolute;
+    top:0; left:0; bottom:0; right:0;
+    z-index: 0;
+}
+.visual .copy {
+    width: 100%;
+    height: 480px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    position: relative;
+    z-index: 10;
+}
+.visual .copy > div:first-child {
+    color: #fff;
+    font-size: 56px;
+    font-family: 'Black Han Sans', sans-serif;
+    letter-spacing: 2px;
+    margin: 10px 0 30px;
+    text-shadow: 2px 2px 3px rgba(33, 30, 31, 0.7);
+}
+
+section.contents {
+    width: 100%;
+    overflow: hidden;
+}
+.art1 {
+    width: 100%;
+    background: rgba(244, 205, 84, 0.9);
+    padding: 120px 0 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.art1 .triangle {
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 20px solid #211e1f;
+}
+
+.triangle.on {
+    -webkit-animation-name: rotate;
+    animation-name: rotate;
+    -webkit-animation-duration: .3s;
+    animation-duration: .3s;
+    -webkit-animation-iteration-count: 2;
+    animation-iteration-count: 2;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+}
+
+.art1 p {
+    width: 590px;
+    color: rgba(33, 30, 31, 0.8);
+    line-height: 200%;
+    margin: 80px 0 150px;
+    font-family: 'Montserrat', sans-serif;
+    font-style: italic;
+    font-weight: 600;
+    position: relative;
+}
+.art1 p::before{
+    content: " '' ";
+    color: rgba(33, 30, 31, 0.9);
+    font-size: 40px;
+    letter-spacing: -2px;
+    position: absolute;
+    top: -10px; left: -30px;
+}
+.art1 p::after {
+    content: " '' ";
+    color: rgba(33, 30, 31, 0.9);
+    font-size: 40px;
+    letter-spacing: -2px;
+    position: absolute;
+    bottom: -20px; right: 10px;
+}
+.art1 .images {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    z-index: 10;
+}
+.art1 .images .left {
+    width: 35%;
+    height: 600px;
+    background: url(../images/barbeque_3.jpg) 50% 50% no-repeat;
+    background-size: cover;
+}
+.art1 .images .right {
+    width: 65%;
+    height: 600px;
+    background: url(../images/barbeque_6.jpg) 60% 50% no-repeat;
+    background-size: cover;
+}
+
+.art2 {
+    background-color: #fdfaed;
+    width: 100%;
+    padding: 120px 0 180px;
+    position: relative;
+}
+.art2::before {
+    border-left: 600px solid transparent;
+    border-right: 600px solid transparent;
+    border-top: 1200px solid rgba(244, 205, 84, 0.8);
+    transform: rotate(70deg);
+    content: "";
+    position: absolute;
+    top:95px; right: -311px;
+}
+.art2 .inner {
+    width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    position: relative;
+    z-index: 10;
+}
+.art2 .title {
+    position: relative;
+}
+.art2 .title::before {
+    width: 3px;
+    height: 50px;
+    background: rgba(244, 205, 84, 0.9);
+    content: "";
+    position: absolute;
+    top:8px; left:-30px;
+}
+.art2 .title > div:first-child {
+    color: #211e1f;
+    font-size: 30px;
+}
+.art2 .title > div:last-child {
+    color: rgba(33, 30, 31, 0.7);
+    font-size: 13px;
+}
+.art2 .group {
+    margin: 100px 0 0 0;
+}
+.group > div:first-of-type {
+    font-size: 26px;
+    letter-spacing: -1px;
+    color: #211e1f;
+}
+.group > div:nth-of-type(2) {
+    height: 200px;
+    margin: 27px 0 0 0;
+    font-size: 15px;
+    letter-spacing: -1px;
+    color: rgba(33, 30, 31, 0.9);
+}
+.group > div:nth-of-type(2) > div {
+    margin: 0 0 7px 0;
+}
+.group > div:nth-of-type(2) > div span {
+    font-size: 12px;
+    font-weight: 500;
+    margin: 0 0 0 5px;
+    color: rgba(33, 30, 31, 0.5);
+}
+.group > h3 {
+    color: rgba(33, 30, 31, 0.9);
+}
+
+/* FOOTER */
+footer {
+    background: #211e1f;
+    position: relative;
+    z-index: 20;
+}
+footer .inner {
+    height: fit-content;
+    background: url(../images/logo.png) 10px 50% no-repeat;
+    padding: 30px 10px;
+}
+footer .inner > div {
+    width: 100%;
+    text-align: right;
+    color: #9b9b9b;
+    font-size: 13px;
+    margin: 0 0 20px 0;
+}
+footer .sns {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+footer .sns > div {
+    width: 18px;
+    height: 18px;
+    margin: 0 0 0 18px;
+    background: url(../images/facebook.png) 50% 50% no-repeat;
+    background-size: 100%;
+    cursor: pointer;
+}
+footer .sns > div:nth-child(2) {
+    background: url(../images/instagram.png) 50% 50% no-repeat;
+    background-size: 100%;
+}
+footer .sns > div:nth-child(3) {
+    background: url(../images/youtube.png) 50% 50% no-repeat;
+    background-size: 100%;
+}
+footer .sns > div:last-child {
+    background: url(../images/twitter.png) 50% 50% no-repeat;
+    background-size: 100%;
+}
+footer div:last-child > span {
+    padding: 0 10px;
+    position: relative;
+    cursor: pointer;
+}
+footer div:last-child > span:last-of-type {
+    padding-right:0;
+}
+footer div:last-child > span::before {
+    width: 1px;
+    height: 10px;
+    background: rgba(255, 255, 255, 0.2);
+    content: "";
+    position: absolute;
+    top: 4px; right: -2px;
+}
+footer div:last-child > span:last-of-type::before {
+    display: none;
+}
+
+
+/* ie10hack */
+@media screen and (-ms-high-contrast: active),
+(-ms-high-contrast: none) {
+    header .topmenu {
+        font-size: 12px;
+    }
+    nav > .gnball > .sub_gnb {
+        left: 0;
+    }
+    .art1 p {
+        font-weight: normal;
+    }
+    .art2 .title::before {
+        top:2px;
+    }
+}
+
+@media screen and (min-width:0\0) {
+    /* IE9 and IE10 rule sets go here */
+}

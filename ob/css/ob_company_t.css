@@ -1,0 +1,84 @@
+@charset "UTF-8";
+
+body { min-width: unset;}
+.inner { width: 100% }
+
+/* 네비게이션 */
+header nav {
+    width: 80%;
+    max-width: 600px;
+}
+nav .gnb {
+    width: 95%;
+    height: 90%;
+}
+nav .gnb .gnbMenu .title {
+    height: 45px;
+    line-height: 45px;
+}
+
+/* 마우스애니메이션 */
+.mouse {
+    bottom: 0;
+    width: 36px;
+    height: 36px;
+    border: none;
+    background: url(../images/arrow_mouse.png) 50% 50% no-repeat;
+    opacity: 0.7;
+}
+.mouse span {
+    background: none;
+}
+
+/* 비쥬얼 */
+section.visual {
+    padding: 0 20px;
+}
+.visual::before {
+    background: rgba(5, 38, 83, 0.5);
+}
+.visual .title {
+    padding: 0 20px 0 0;
+}
+.visual h3 {
+    font-size: 0.97em;
+}
+
+/* 컨텐츠 */
+/* 회사소개 */
+.art1 {
+    padding: 100px 0;
+    background: linear-gradient(to right, #fafafa 62%, #f3f5f7 38%);
+}
+.art1 .group {
+    width: 738px;
+    margin: 0 auto;
+    padding: 0;
+    clear: both;
+    position: unset;
+}
+.art1 .group .number {
+    position: unset;
+}
+.art1 .group .tit {
+    padding: 10px 0;
+}
+.art1 .group .sub {
+    padding: 0;
+}
+.art1 .group .img {
+    width: 100%;
+}
+.art1 .group:nth-of-type(even) {
+    float: unset;
+    margin: 50px auto;
+}
+/* ABinBev 소개 */
+.art3 .inner {
+    width: 738px;
+    margin: 0 auto;
+    padding: 80px 0;
+}
+.art3 img {
+    width: 100%;
+}

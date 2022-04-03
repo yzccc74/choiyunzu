@@ -7,7 +7,7 @@
 * { box-sizing: border-box; }
 
 body { margin: 0; padding: 0 30px; min-width: 1280px; font-family: 'Noto Sans KR', sans-serif; }
-a { text-decoration: none;}
+a { text-decoration: none; color:inherit; }
 ul { margin:0; padding:0; list-style:none; }
 .inner { width: 1200px; margin: 0 auto; }
 .m_sub { display: none; }
